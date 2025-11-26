@@ -1,0 +1,128 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at center, #0a0f2c, #000212);
+    padding: 30px;
+    color: #00eaff;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: rgba(0, 20, 40, 0.75);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px #00c3ff80;
+    border: 1px solid #00baff;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00eaff;
+    font-size: 30px;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+h5 {
+    color: #00eaff;
+    margin-top: 10px;
+}
+
+.form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ----------------------------- */
+/*      UNIVERSAL INPUT STYLE    */
+/* ----------------------------- */
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="password"],
+.form select {
+    width: 90%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #00eaff;
+    border-radius: 8px;
+    background: rgba(0, 15, 40, 0.75);
+    color: #00eaff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.25s ease-in-out;
+    box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.15);
+}
+
+
+
+/* Glow effect on focus */
+.form input[type="text"]:focus,
+.form input[type="number"]:focus,
+form input[type="password"]:focus,
+.form select:focus {
+    border-color: #00f6ff;
+    box-shadow: 0 0 15px #00eaff, inset 0 0 10px rgba(0, 255, 255, 0.25);
+    transform: scale(1.02);
+}
+
+/* Sci-fi select arrow */
+.form select {
+    appearance: none;
+    background-image: 
+        linear-gradient(45deg, transparent 50%, #00eaff 50%),
+        linear-gradient(135deg, #00eaff 50%, transparent 50%);
+    background-position: 
+        calc(100% - 20px) calc(50% + 4px),
+        calc(100% - 15px) calc(50% - 6px);
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/* Hover glow */
+.form input:hover,
+.form input[type="password"]:hover,
+.form select:hover {
+    box-shadow: 0 0 10px #00eaff80;
+}
+
+
+/* ----------------------------- */
+/*             BUTTON            */
+/* ----------------------------- */
+
+button {
+    background: linear-gradient(45deg, #00eaff, #0084ff);
+    color: #000214;
+    padding: 14px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 17px;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #00eaff;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00eaff;
+}
+
+
+/* ----------------------------- */
+/*           RESULT BOX          */
+/* ----------------------------- */
+
+.result {
+    margin-top: 25px;
+    background: rgba(0, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    color: #00eaff;
+    border: 1px solid #00eaff;
+    font-size: 17px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WriteGen</title>
+    <link rel="stylesheet" th:href="@{/css/IndexStyle.css}" />
+</head>
+<body>
+    <div class="container">
+        <h2>WriteGen</h2>
+
+        <form action="/generate" method="post" class="form">
+
+            <label for="format"><h5>Select Formatting:</h5></label>
+            <select name="FORMAT" id="format">
+                <option value="paragraph">Paragraph</option>
+                <option value="speech">Speech</option>
+                <option value="eassy">Eassy</option>
+            </select>
+
+            <input type="text" name="TOPIC" placeholder="Your topic" required>
+
+            <input type="number" name="WORDS" min="5" max="350" placeholder="Words (5-350)" required>
+
+            
+            <input type="password" name="PASSWORD" placeholder="Enter password" required>
+
+            <button type="submit">Generate</button>
+        </form>
+
+        <div th:if="${essay}" class="result">
+            <hr>
+            <h3>Generated :</h3>
+            <p th:text="${essay}"></p>
+        </div>
+    </div>
+</body>
+</html>
